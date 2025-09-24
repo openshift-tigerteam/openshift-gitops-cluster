@@ -1,0 +1,25 @@
+- op: add
+  path: /spec/resourceHealthChecks/-
+  value:
+    group: operators.coreos.com
+    kind: Subscription
+    check: |
+      hs = {}
+      if obj.status ~= nil and obj.status.state ~= nil then
+        if obj.status.state == "AtLatestKnown" then
+          hs.status = "Healthy"
+          hs.message = "Subscription is at latest known version"
+          return hs
+        elseif obj.status.state == "UpgradePending" or obj.status.state == "UpgradeAvailable" then
+          hs.status = "Progressing"
+          hs.message = "Subscription upgrade in progress: " .. obj.status.state
+          return hs
+        else
+          hs.status = "Degraded"
+          hs.message = "Unexpected subscription state: " .. obj.status.state
+          return hs
+        end
+      end
+      hs.status = "Progressing"
+      hs.message = "Waiting for subscription to become ready"
+      return hs
