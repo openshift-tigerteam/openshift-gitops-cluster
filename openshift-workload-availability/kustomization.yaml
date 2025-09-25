@@ -5,4 +5,4 @@ metadata:
 resources:
   - namespace.yaml
   - operator-group.yaml
-  - subscription.yaml
+  - node-healthcheck-operator-subscription.yaml
