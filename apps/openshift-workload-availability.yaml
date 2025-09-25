@@ -8,7 +8,7 @@ metadata:
 spec:
   project: cluster
   source:
-    repoURL: https://github.com/snimmo/openshift-cluster-gitops.git
+    repoURL: https://github.com/openshift-tigerteam/openshift-gitops-cluster.git
     targetRevision: main
     path: openshift-workload-availability
   destination:
