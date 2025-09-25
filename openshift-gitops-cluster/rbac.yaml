@@ -1,11 +1,26 @@
+apiVersion: user.openshift.io/v1
+kind: Group
+metadata:
+  name: cluster-admins
+users: []
+---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
   name: openshift-gitops-cluster-crb
 subjects:
   - kind: ServiceAccount
+    name: openshift-gitops-cluster-applicationset-controller
+    namespace: openshift-gitops-cluster
+  - kind: ServiceAccount
     name: openshift-gitops-cluster-argocd-application-controller
     namespace: openshift-gitops-cluster
+  - kind: ServiceAccount
+    name: openshift-gitops-cluster-argocd-server
+    namespace: openshift-gitops-cluster
+  - apiGroup: rbac.authorization.k8s.io
+    kind: Group
+    name: cluster-admins
 roleRef:
   kind: ClusterRole
   name: cluster-admin
