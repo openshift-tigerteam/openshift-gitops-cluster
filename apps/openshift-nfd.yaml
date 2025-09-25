@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: openshift-nfd
-  namespace: openshift-nfd
+  namespace: openshift-gitops-cluster
   annotations:
     argocd.argoproj.io/sync-wave: "2"
 spec:
