@@ -1,0 +1,38 @@
+apiVersion: remediation.medik8s.io/v1alpha1
+kind: NodeHealthCheck
+metadata:
+  name: worker-node-health-check
+  annotations:
+    argocd.argoproj.io/sync-wave: "3"
+spec:
+  # 1. Node Selection
+  selector:
+    matchLabels:
+      node-role.kubernetes.io/worker: ""
+  
+  # 2. Unhealthy Conditions (Criteria for Failure)
+  unhealthyConditions:
+    - type: Ready
+      status: "False"
+      duration: 60s # 5 minutes
+    - type: Ready
+      status: Unknown
+      duration: 60s # 5 minutes
+
+  # 3. Remediation Configuration
+  # This section points to the remediation template to execute.
+  # SelfNodeRemediation is commonly used for a reboot attempt.
+  remediationTemplate:
+    apiVersion: remediation.medik8s.io/v1alpha1
+    kind: SelfNodeRemediationTemplate
+    name: self-node-remediation-automatic-strategy-template
+    namespace: openshift-operators
+
+  # 4. Safety Mechanism (Optional but Recommended)
+  # Ensures remediation doesn't proceed if too many nodes are already unhealthy.
+  minHealthy: "51%"
+  
+  # 5. Pause for Updates (OpenShift-Specific)
+  # Temporarily stops remediation during a cluster upgrade.
+  # Disabled for OpenShift (by default, it monitors the ClusterVersion object).
+  # pauseRequests: []
