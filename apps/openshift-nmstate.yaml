@@ -13,6 +13,7 @@ spec:
     path: openshift-nmstate
   destination:
     server: https://kubernetes.default.svc
+    namespace: openshift-nmstate
   syncPolicy:
     automated:
       prune: true

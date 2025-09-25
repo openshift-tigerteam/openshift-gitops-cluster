@@ -13,6 +13,7 @@ spec:
     path: openshift-workload-availability
   destination:
     server: https://kubernetes.default.svc
+    namespace: openshift-workload-availability
   syncPolicy:
     automated:
       prune: true

@@ -13,6 +13,7 @@ spec:
     path: openshift-nfd
   destination:
     server: https://kubernetes.default.svc
+    namespace: openshift-nfd
   syncPolicy:
     automated:
       prune: true
