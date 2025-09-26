@@ -16,5 +16,3 @@ spec:
   peerRequestTimeout: 5s
   peerUpdateInterval: 15s
   isSoftwareRebootEnabled: true
-  # This is important for VMs:
-  skipWaitForDeleteTimeoutSeconds: 0 
