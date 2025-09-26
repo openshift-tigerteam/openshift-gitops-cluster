@@ -7,7 +7,7 @@ metadata:
     nimmo: test
 spec:
   watchdogFilePath: /dev/watchdog
-  safeTimeToAssumeNodeRebootedSeconds: 60
+  safeTimeToAssumeNodeRebootedSeconds: 30
   maxApiErrorThreshold: 3
   apiCheckInterval: 5s
   apiServerTimeout: 5s
