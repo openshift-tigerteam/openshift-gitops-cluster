@@ -1,7 +1,7 @@
 apiVersion: machine.openshift.io/v1beta1
 kind: MachineHealthCheck
 metadata:
-  name: worker-health-check
+  name: machine-health-check-worker
   namespace: openshift-machine-api
 spec:
   selector:
