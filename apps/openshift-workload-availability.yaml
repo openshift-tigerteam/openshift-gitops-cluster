@@ -18,5 +18,5 @@ spec:
     automated:
       prune: true
       selfHeal: true
-  orphanedResources:
-    warn: false
+    orphanedResources:
+      warn: false
