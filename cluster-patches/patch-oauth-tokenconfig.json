@@ -1,5 +1,7 @@
 - op: add
-  path: /spec/tokenConfig
-  value:
-    accessTokenMaxAgeSeconds: 86400
-    authorizeTokenMaxAgeSeconds: 300
+  path: /spec/tokenConfig/accessTokenMaxAgeSeconds
+  value: 86400
+
+- op: add
+  path: /spec/tokenConfig/authorizeTokenMaxAgeSeconds
+  value: 300
