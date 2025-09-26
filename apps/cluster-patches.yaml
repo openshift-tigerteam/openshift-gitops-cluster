@@ -8,6 +8,7 @@ metadata:
 spec:
   project: cluster
   source:
+    repoURL: ""
     kustomize:
       patches:
         - target:
