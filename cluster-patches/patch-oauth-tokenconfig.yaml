@@ -5,4 +5,4 @@ metadata:
 spec:
   tokenConfig:
     accessTokenMaxAgeSeconds: 86400
-    authorizeTokenMaxAgeSeconds: 300
+    authorizeTokenMaxAgeSeconds: 301
