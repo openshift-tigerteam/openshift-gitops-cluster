@@ -1,11 +1,7 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-metadata:
-  name: cluster
-patchesJson6902:
-  - target:
-      group: config.openshift.io
-      version: v1
-      kind: OAuth
-      name: cluster
-    path: patch-oauth-tokenconfig.json
+
+resources:
+  - stub-oauth.yaml
+patches:
+  - path: patch-oauth-tokenconfig.yaml
