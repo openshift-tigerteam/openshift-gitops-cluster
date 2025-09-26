@@ -5,3 +5,5 @@ metadata:
 resources:
   - machine-health-check-worker.yaml
   - node-health-check-worker.yaml
+  - self-node-remediation-template.yaml
+  - self-node-remediation-config.yaml

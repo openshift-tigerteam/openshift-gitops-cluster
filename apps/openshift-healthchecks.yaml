@@ -1,19 +1,18 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: openshift-machine-api
+  name: openshift-healtchecks
   namespace: openshift-gitops-cluster
   annotations:
-    argocd.argoproj.io/sync-wave: "2"
+    argocd.argoproj.io/sync-wave: "3"
 spec:
   project: cluster
   source:
     repoURL: https://github.com/openshift-tigerteam/openshift-gitops-cluster.git
     targetRevision: main
-    path: openshift-machine-api
+    path: openshift-healtchecks
   destination:
     server: https://kubernetes.default.svc
-    namespace: openshift-machine-api
   syncPolicy:
     automated:
       prune: true

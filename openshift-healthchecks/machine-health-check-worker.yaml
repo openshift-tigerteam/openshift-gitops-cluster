@@ -6,7 +6,8 @@ metadata:
 spec:
   selector:
     matchLabels:
-      machine.openshift.io/cluster-api-machine-role: worker
+      # Label selector to match worker machines (not nodes)
+      machine.openshift.io/worker: ""
   unhealthyConditions:
   - type: Ready
     status: "False"
