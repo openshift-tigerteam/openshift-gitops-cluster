@@ -8,7 +8,7 @@ spec:
   selector:
     matchLabels:
       node-role.kubernetes.io/worker: ""
-  maxUnhealthy: 50%
+  minHealthy: 51%
   unhealthyConditions:
   - duration: 60s
     type: Ready
