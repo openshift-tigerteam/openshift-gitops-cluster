@@ -3,5 +3,4 @@ kind: Node
 metadata:
   name: cluster
 spec:
-  tokenConfig:
-    workerLatencyProfile: MediumUpdateAverageReaction
+  workerLatencyProfile: MediumUpdateAverageReaction
