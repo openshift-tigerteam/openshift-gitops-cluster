@@ -2,22 +2,20 @@ apiVersion: remediation.medik8s.io/v1alpha1
 kind: NodeHealthCheck
 metadata:
   name: node-health-check-worker
-  labels:
-    nimmo: test
 spec:
   selector:
     matchLabels:
       node-role.kubernetes.io/worker: ""
   maxUnhealthy: 40%
   unhealthyConditions:
-  - duration: 10s
+  - duration: 60s
     type: Ready
     status: "False"
-  - duration: 10s
+  - duration: 60s
     type: Ready
     status: Unknown
   remediationTemplate:
     apiVersion: self-node-remediation.medik8s.io/v1alpha1
     kind: SelfNodeRemediationTemplate
-    name: self-node-remediation-template
+    name: self-node-remediation-resource-deletion-template
     namespace: openshift-workload-availability
