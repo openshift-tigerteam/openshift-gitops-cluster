@@ -2,5 +2,6 @@
 
 
 ```shell
-watch -n3 'echo "--- vmi ---"; oc get vmi -A -o wide | grep -E "NAME|$NODE_NAME"; echo -e "\n--- snr ---"; oc get selfnoderemediation -A'
+watch -n3 'echo "--- nodes"; oc get nodes; echo -e "\n--- vmi"; oc get vmi -A -o wide | grep -E "NAME|$NODE_NAME"; echo -e "\n--- snr"; oc get selfnoderemediation -A'
 ```
+

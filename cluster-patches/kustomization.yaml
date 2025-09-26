@@ -3,7 +3,7 @@ kind: Kustomization
 metadata:
   name: cluster-patches
 resources:
-  - fast-fail-kubeletconfig.yaml
+  #- fast-fail-kubeletconfig.yaml
   - oauth-cluster/oauth-cluster-stub.yaml
   - node-config/node-config-stub.yaml
 patches:
