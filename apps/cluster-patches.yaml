@@ -18,10 +18,10 @@ spec:
           patch: |-
             - op: add
               path: /spec/tokenConfig/accessTokenMaxAgeSeconds
-              value: 86400
+              value: 86401
             - op: add
               path: /spec/tokenConfig/authorizeTokenMaxAgeSeconds
-              value: 300
+              value: 301
   destination:
     server: https://kubernetes.default.svc
   syncPolicy:
