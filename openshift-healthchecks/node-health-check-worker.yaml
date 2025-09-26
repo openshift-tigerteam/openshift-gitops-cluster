@@ -6,6 +6,7 @@ spec:
   selector:
     matchLabels:
       node-role.kubernetes.io/worker: ""
+  maxUnhealthy: 40%
   unhealthyConditions:
   - duration: 60s
     type: Ready
