@@ -1,7 +1,7 @@
 apiVersion: operator.openshift.io/v1
 kind: KubeDescheduler
 metadata:
-  name: cluster-basic
+  name: cluster
   namespace: openshift-kube-descheduler-operator
   annotations:
     argocd.argoproj.io/sync-wave: "3"
@@ -26,4 +26,3 @@ spec:
   operatorLogLevel: Normal
   profiles:
     - DevKubeVirtRelieveAndMigrate
-  unsupportedConfigOverrides: null
