@@ -8,10 +8,10 @@ spec:
       node-role.kubernetes.io/worker: ""
   maxUnhealthy: 40%
   unhealthyConditions:
-  - duration: 60s
+  - duration: 30s
     type: Ready
     status: "False"
-  - duration: 60s
+  - duration: 30s
     type: Ready
     status: Unknown
   remediationTemplate:
