@@ -1,8 +1,5 @@
-apiVersion: config.openshift.io/v1
-kind: OAuth
-metadata:
-  name: cluster
-spec:
-  tokenConfig:
-    accessTokenMaxAgeSeconds: 86400 
+- op: add
+  path: /spec/tokenConfig
+  value:
+    accessTokenMaxAgeSeconds: 86400
     authorizeTokenMaxAgeSeconds: 300
