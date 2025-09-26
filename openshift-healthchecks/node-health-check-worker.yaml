@@ -2,6 +2,8 @@ apiVersion: remediation.medik8s.io/v1alpha1
 kind: NodeHealthCheck
 metadata:
   name: node-health-check-worker
+  labels:
+    nimmo: test
 spec:
   selector:
     matchLabels:

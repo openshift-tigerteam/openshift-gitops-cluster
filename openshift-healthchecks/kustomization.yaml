@@ -4,5 +4,5 @@ metadata:
   name: openshift-healtchecks
 resources:
   - node-health-check-worker.yaml
-  - self-node-remediation-template.yaml
   - self-node-remediation-config.yaml
+  - self-node-remediation-template.yaml

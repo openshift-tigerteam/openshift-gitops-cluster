@@ -3,6 +3,8 @@ kind: SelfNodeRemediationTemplate
 metadata:
   name: self-node-remediation-template
   namespace: openshift-workload-availability
+  labels:
+    nimmo: test
 spec:
   template:
     spec:
