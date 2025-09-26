@@ -8,18 +8,9 @@ metadata:
 spec:
   project: cluster
   source:
-    repoURL: ""
-    kustomize:
-      patches:
-        - target:
-            group: config.openshift.io
-            version: v1
-            kind: OAuth
-            name: cluster
-          patch: |-
-            - op: add
-              path: /spec/tokenConfig/accessTokenMaxAgeSeconds
-              value: 86401
+    repoURL: https://github.com/openshift-tigerteam/openshift-gitops-cluster.git
+    targetRevision: main
+    path: cluster-patches
   destination:
     server: https://kubernetes.default.svc
   syncPolicy:

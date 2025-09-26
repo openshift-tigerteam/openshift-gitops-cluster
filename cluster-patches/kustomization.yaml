@@ -2,6 +2,6 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-  - stub-oauth.yaml
+  - oauth-cluster/oauth-cluster-stub.yaml
 patches:
-  - path: patch-oauth-tokenconfig.yaml
+  - path: oauth-cluster/oauth-cluster-token-config-patch.yaml

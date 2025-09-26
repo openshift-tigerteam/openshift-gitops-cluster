@@ -4,5 +4,4 @@ metadata:
   name: cluster
 spec:
   tokenConfig:
-    accessTokenMaxAgeSeconds: 86400
-    authorizeTokenMaxAgeSeconds: 301
+    accessTokenMaxAgeSeconds: 86401
