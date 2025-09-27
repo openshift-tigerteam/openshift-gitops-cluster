@@ -5,6 +5,7 @@ metadata:
 spec:
   machineConfigPoolSelector:
     matchLabels:
+      # MUST CHANGE THIS ON non-3-node clusters
       pools.operator.machineconfiguration.openshift.io/master: ""
   kubeletConfig:
     nodeStatusUpdateFrequency: 4s
