@@ -3,8 +3,9 @@ kind: KubeletConfig
 metadata:
   name: worker-node-timing
 spec:
-  machineConfigPool:
-    name: worker
+  machineConfigPoolSelector:
+    matchLabels:
+      pools.operator.machineconfiguration.openshift.io/worker: ""
   kubeletConfig:
     nodeStatusUpdateFrequency: 4s
     nodeStatusReportFrequency: 30s
