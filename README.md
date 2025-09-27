@@ -27,10 +27,18 @@ stringData:
 EOF
 ```
 
-## Apply the App-of-Apps
+## Apply the Apps
 
+Apply the app of apps
 ```bash
 oc apply -f apps.yaml
+```
+
+...or indivividually
+```shell
+oc apply -f apps/openshift-gitops-operator.yaml
+oc apply -f apps/openshift-gitops-cluster.yaml
+oc apply -f apps/openshift-nmstate.yaml
 ```
 
 ## Add Users to the ArgoCD Admins Group
@@ -38,3 +46,12 @@ oc apply -f apps.yaml
 ```bash
 oc adm groups add-users cluster-admins <user>
 ```
+
+## Documentation
+
+0 - Empty  
+1 - Namespace, OperatorGroup  
+2 - RBAC
+3 - Subscriptions  
+4 - <empty>
+5+. Workloads, CRs, etc

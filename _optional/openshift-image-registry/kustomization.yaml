@@ -1,0 +1,6 @@
+resources:
+  - openshift-image-registry-storage.yaml
+  - config-stub.yaml
+
+patches:
+  - path: config-storage-patch.yaml
