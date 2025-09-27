@@ -39,8 +39,9 @@ oc apply -f apps.yaml
 ```shell
 oc apply -f apps/openshift-gitops-operator.yaml
 oc apply -f apps/openshift-gitops-cluster.yaml
-oc apply -f apps/openshift-nmstate.yaml
 oc apply -f apps/cluster-patches.yaml
+# Then other stuff
+oc apply -f apps/openshift-nmstate.yaml
 ```
 
 ## Add Users to the ArgoCD Admins Group

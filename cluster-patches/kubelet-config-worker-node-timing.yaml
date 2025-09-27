@@ -1,0 +1,10 @@
+apiVersion: machineconfiguration.openshift.io/v1
+kind: KubeletConfig
+metadata:
+  name: worker-node-timing
+spec:
+  machineConfigPool:
+    name: worker
+  kubeletConfig:
+    nodeStatusUpdateFrequency: 4s
+    nodeStatusReportFrequency: 30s
