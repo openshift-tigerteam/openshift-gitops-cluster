@@ -3,9 +3,9 @@ kind: Kustomization
 metadata:
   name: cluster-patches
 resources:
-  #- fast-fail-kubeletconfig.yaml
   - oauth-cluster/oauth-cluster-stub.yaml
-  - node-config/node-config-stub.yaml
+  # - node-config/node-config-stub.yaml
+  # - fast-fail-kubeletconfig.yaml
 patches:
   - path: oauth-cluster/oauth-cluster-token-config-patch.yaml
-  - path: node-config/node-config-worker-latency-patch.yaml
+  # - path: node-config/node-config-worker-latency-patch.yaml

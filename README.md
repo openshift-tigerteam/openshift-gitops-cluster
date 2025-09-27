@@ -2,13 +2,13 @@
 
 ## Install Openshift GitOps
 
-```bash
+```shell
 ./install-openshift-gitops.sh
 ```
 
 ## Create Secret for GitHub Access
 
-```bash
+```shell
 oc apply -f - <<EOF
 apiVersion: v1
 kind: Secret
@@ -30,11 +30,12 @@ EOF
 ## Apply the Apps
 
 Apply the app of apps
-```bash
+```shell
 oc apply -f apps.yaml
 ```
 
-...or indivividually
+...or indivividually  
+
 ```shell
 oc apply -f apps/openshift-gitops-operator.yaml
 oc apply -f apps/openshift-gitops-cluster.yaml
