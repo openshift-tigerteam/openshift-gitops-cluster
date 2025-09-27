@@ -3,11 +3,15 @@ kind: Kustomization
 metadata:
   name: cluster-patches
 resources:
-  - oauth-cluster/oauth-cluster-stub.yaml
   - console-cluster/console-cluster-stub.yaml
+  - kube-controller-manager/kube-controller-manager-cluster-stub.yaml
+  - oauth-cluster/oauth-cluster-stub.yaml
+  
   # - node-config/node-config-stub.yaml
   # - fast-fail-kubeletconfig.yaml
 patches:
-  - path: oauth-cluster/oauth-cluster-token-config-patch.yaml
   - path: console-cluster/console-cluster-patch.yaml
+  - path: kube-controller-manager/kube-controller-manager-cluster-patch
+  - path: oauth-cluster/oauth-cluster-token-config-patch.yaml
+  
   # - path: node-config/node-config-worker-latency-patch.yaml
