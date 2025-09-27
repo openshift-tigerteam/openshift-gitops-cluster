@@ -8,4 +8,6 @@ watch -n1 'echo "--- nodes"; oc get nodes; echo -e "\n--- vmi"; oc get vmi -A -o
 46
 53
 
-added kube-controller manager patch 30s
+added KubeletConfig
+
+49
