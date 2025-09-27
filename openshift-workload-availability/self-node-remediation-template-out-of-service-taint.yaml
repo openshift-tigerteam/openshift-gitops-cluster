@@ -1,0 +1,14 @@
+apiVersion: self-node-remediation.medik8s.io/v1alpha1
+kind: SelfNodeRemediationTemplate
+metadata:
+  name: self-node-remediation-template-out-of-service-taint
+  namespace: openshift-workload-availability   
+  annotations:
+    argocd.argoproj.io/sync-wave: "3"
+    remediation.medik8s.io/multiple-templates-support: "true"
+  labels:
+    remediation.medik8s.io/default-template: "true"
+spec:
+  template:
+    spec:
+      remediationStrategy: OutOfServiceTaint

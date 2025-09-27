@@ -8,5 +8,6 @@ resources:
   - node-healthcheck-operator-subscription.yaml
   - self-node-remediation-operator-subscription.yaml
   - worker-node-health-check.yaml
+  - self-node-remediation-template-out-of-service-taint.yaml
   #- node-maintenence-operator-subscription.yaml
   #- worker-node-health-check.yaml

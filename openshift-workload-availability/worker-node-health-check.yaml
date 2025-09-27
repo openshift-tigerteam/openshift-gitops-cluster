@@ -3,7 +3,7 @@ kind: NodeHealthCheck
 metadata:
   name: worker-node-health-check
   annotations:
-    argocd.argoproj.io/sync-wave: "3"
+    argocd.argoproj.io/sync-wave: "4"
 spec:
   selector:
     matchLabels:
@@ -12,11 +12,12 @@ spec:
   unhealthyConditions:
   - type: Ready
     status: "False"
-    duration: "10s"
+    duration: "5s"
   - type: Ready
     status: "Unknown"
-    duration: "10s"
+    duration: "5s"
   remediationTemplate:
     apiVersion: self-node-remediation.medik8s.io/v1alpha1
     kind: SelfNodeRemediationTemplate
-    name: self-node-remediation-automatic-strategy-template
+    name: self-node-remediation-template-out-of-service-taint
+    namespace: openshift-workload-availability
