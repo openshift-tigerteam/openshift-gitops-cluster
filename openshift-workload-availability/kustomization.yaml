@@ -7,5 +7,6 @@ resources:
   - operator-group.yaml
   - node-healthcheck-operator-subscription.yaml
   - self-node-remediation-operator-subscription.yaml
+  - worker-node-health-check.yaml
   #- node-maintenence-operator-subscription.yaml
   #- worker-node-health-check.yaml

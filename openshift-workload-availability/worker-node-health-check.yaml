@@ -9,15 +9,13 @@ spec:
     matchLabels:
       node-role.kubernetes.io/worker: ""
   unhealthyConditions:
-    - type: Ready
-      status: "False"
-      duration: 60s 
-    - type: Ready
-      status: Unknown
-      duration: 60s 
+  - type: Ready
+    status: "False"
+    duration: "90s"
+  - type: Ready
+    status: "Unknown"
+    duration: "90s"
   remediationTemplate:
-    apiVersion: remediation.medik8s.io/v1alpha1
+    apiVersion: self-node-remediation.medik8s.io/v1alpha1
     kind: SelfNodeRemediationTemplate
     name: self-node-remediation-automatic-strategy-template
-    namespace: openshift-operators
-  minHealthy: "51%"
