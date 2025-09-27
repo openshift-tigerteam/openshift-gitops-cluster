@@ -7,3 +7,4 @@ resources:
   - operator-group.yaml
   - local-storage-subscription.yaml
   - odf-operator-subscription.yaml
+  - auto-discover-devices.yaml
