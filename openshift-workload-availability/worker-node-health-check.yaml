@@ -8,6 +8,7 @@ spec:
   selector:
     matchLabels:
       node-role.kubernetes.io/worker: ""
+  minHealthy: 51%
   unhealthyConditions:
   - type: Ready
     status: "False"
