@@ -11,7 +11,7 @@ resources:
   # - fast-fail-kubeletconfig.yaml
 patches:
   - path: console-cluster/console-cluster-patch.yaml
-  - path: kube-controller-manager/kube-controller-manager-cluster-patch
+  - path: kube-controller-manager/kube-controller-manager-cluster-patch.yaml
   - path: oauth-cluster/oauth-cluster-token-config-patch.yaml
-  
+
   # - path: node-config/node-config-worker-latency-patch.yaml
