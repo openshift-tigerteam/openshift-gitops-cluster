@@ -8,3 +8,4 @@ resources:
   - local-storage-subscription.yaml
   - odf-operator-subscription.yaml
   - auto-discover-devices.yaml
+  - default-lvs.yaml
