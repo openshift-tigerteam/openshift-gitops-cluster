@@ -4,7 +4,7 @@ metadata:
   name: cluster
 spec:
   managementState: Managed
-  replicas: 3
+  replicas: 1
   storage:
     pvc:
       claim: openshift-image-registry-storage
