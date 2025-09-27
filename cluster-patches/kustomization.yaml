@@ -7,7 +7,7 @@ resources:
   - console-cluster/console-cluster-stub.yaml
   - oauth-cluster/oauth-cluster-stub.yaml
   # Standalone
-  - kubelet-config-worker-node-timing.yaml
+  # - kubelet-config-worker-node-timing.yaml
 patches:
   - path: console-cluster/console-cluster-patch.yaml
   - path: oauth-cluster/oauth-cluster-token-config-patch.yaml

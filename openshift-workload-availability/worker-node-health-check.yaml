@@ -12,10 +12,10 @@ spec:
   unhealthyConditions:
   - type: Ready
     status: "False"
-    duration: "90s"
+    duration: "10s"
   - type: Ready
     status: "Unknown"
-    duration: "90s"
+    duration: "10s"
   remediationTemplate:
     apiVersion: self-node-remediation.medik8s.io/v1alpha1
     kind: SelfNodeRemediationTemplate
