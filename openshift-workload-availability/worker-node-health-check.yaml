@@ -7,7 +7,7 @@ metadata:
 spec:
   selector:
     matchLabels:
-      node-role.kubernetes.io/worker: ""
+      node-role.kubernetes.io/test: ""
   minHealthy: 51%
   unhealthyConditions:
   - type: Ready
