@@ -43,6 +43,9 @@ oc apply -f apps/cluster-patches.yaml
 # Then other stuff
 oc apply -f apps/openshift-nmstate.yaml
 oc apply -f apps/openshift-workload-availability.yaml
+# Storage
+oc apply -f _optional/openshift-storage/openshift-storage.yaml
+
 ```
 
 ## Add Users to the ArgoCD Admins Group
