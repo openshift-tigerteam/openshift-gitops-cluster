@@ -9,3 +9,4 @@ resources:
   - odf-operator-subscription.yaml
   - auto-discover-devices.yaml
   - default-lvs.yaml
+  - ocs-storagecluster.yaml
